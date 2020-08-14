@@ -31,8 +31,8 @@ namespace QuantityMeasurementProblemTest
         [Test]
         public void GivenTwoFeetWithSameValues_WhenCompared_ShouldReturnEqual()
         {
-            double valueInFeet = this.quantityMeasurement.GetConvertedValue(0.0);
-            double valueInFeet2 = this.quantityMeasurement.GetConvertedValue(0.0);
+            double valueInFeet = this.quantityMeasurement.GetConvertedValue(1, Units.FEET_TO_INCH);
+            double valueInFeet2 = this.quantityMeasurement.GetConvertedValue(1, Units.FEET_TO_INCH);
             Assert.AreEqual(valueInFeet, valueInFeet2);
         }
 
@@ -72,8 +72,8 @@ namespace QuantityMeasurementProblemTest
         [Test]
         public void GivenTwoSameValues_WhenCompared_ShouldReturnEqual()
         {
-            double value1 = this.quantityMeasurement.GetConvertedValue(10.0);
-            double value2 = this.quantityMeasurement.GetConvertedValue(10.0);
+            double value1 = this.quantityMeasurement.GetConvertedValue(10.0, Units.FEET_TO_INCH);
+            double value2 = this.quantityMeasurement.GetConvertedValue(10.0, Units.FEET_TO_INCH);
             Assert.AreEqual(value1, value2);
         }
 
@@ -83,8 +83,8 @@ namespace QuantityMeasurementProblemTest
         [Test]
         public void GivenTwoInchSameValues_WhenCompared_ShouldReturnEqual()
         {
-            double inch1 = this.quantityMeasurement.GetConvertedValue(0.0);
-            double inch2 = this.quantityMeasurement.GetConvertedValue(0.0);
+            double inch1 = this.quantityMeasurement.GetConvertedValue(0.0, Units.INCH_TO_FEET);
+            double inch2 = this.quantityMeasurement.GetConvertedValue(0.0, Units.INCH_TO_FEET);
             Assert.AreEqual(inch1, inch2);
         }
 
@@ -94,8 +94,8 @@ namespace QuantityMeasurementProblemTest
         [Test]
         public void GivenTwoDifferentInchValues_WhenCompared_ShouldReturnNotEqual()
         {
-            double inch1 = this.quantityMeasurement.GetConvertedValue(0.0);
-            double inch2 = this.quantityMeasurement.GetConvertedValue(10.0);
+            double inch1 = this.quantityMeasurement.GetConvertedValue(0.0, Units.INCH_TO_FEET);
+            double inch2 = this.quantityMeasurement.GetConvertedValue(10.0, Units.INCH_TO_FEET);
             Assert.AreNotEqual(inch1, inch2);
         }
 
@@ -136,8 +136,19 @@ namespace QuantityMeasurementProblemTest
         [Test]
         public void GivenTwoSameInchValues_WhenCompared_ShouldReturnEqual()
         {
-            double inch1 = this.quantityMeasurement.GetConvertedValue(10.0);
-            double inch2 = this.quantityMeasurement.GetConvertedValue(10.0);
+            double inch1 = this.quantityMeasurement.GetConvertedValue(10.0, Units.INCH_TO_FEET);
+            double inch2 = this.quantityMeasurement.GetConvertedValue(10.0, Units.INCH_TO_FEET);
+            Assert.AreEqual(inch2, inch1);
+        }
+
+        /// <summary>
+        /// Test 1.12: To Perform Equality Check On Value.
+        /// </summary>
+        [Test]
+        public void GivenZeroFeetAndZeroInch_WhenCompared_ShouldReturnEqual()
+        {
+            double inch1 = this.quantityMeasurement.GetConvertedValue(0, Units.FEET_TO_INCH);
+            double inch2 = this.quantityMeasurement.GetConvertedValue(0, Units.INCH_TO_FEET);
             Assert.AreEqual(inch2, inch1);
         }
     }

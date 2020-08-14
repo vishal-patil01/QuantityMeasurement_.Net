@@ -3,8 +3,6 @@
 // </copyright>
 namespace QuantityMeasurementProblem
 {
-    using System;
-
     /// <summary>
     /// Converting Quantity From one Unit To Another Unit.
     /// </summary>
@@ -14,10 +12,11 @@ namespace QuantityMeasurementProblem
         /// Convert Passed Value To Feet.
         /// </summary>
         /// <param name="value">Any Length Value</param>
+        /// <param name="units">Units Value</param>
         /// <returns>Feet Value</returns>
-        public double GetConvertedValue(double value)
+        public double GetConvertedValue(double value, double units)
         {
-            return value;
+            return value * units;
         }
 
         /// <summary>
