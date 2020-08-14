@@ -151,5 +151,49 @@ namespace QuantityMeasurementProblemTest
             double inch2 = this.quantityMeasurement.GetConvertedValue(0, Units.INCH_TO_FEET);
             Assert.AreEqual(inch2, inch1);
         }
+
+        /// <summary>
+        /// Test 1.13: To Check 1 Feet is not equal to 1 Inch.
+        /// </summary>
+        [Test]
+        public void GivenOneFeetAndOneInch_WhenCompared_ShouldReturnNotEqual()
+        {
+            double inch1 = this.quantityMeasurement.GetConvertedValue(1, Units.FEET_TO_INCH);
+            double inch2 = this.quantityMeasurement.GetConvertedValue(1, Units.INCH_TO_FEET);
+            Assert.AreNotEqual(inch2, inch1);
+        }
+
+        /// <summary>
+        /// Test 1.14: To Check 1 Inch is not equal to 1 Feet.
+        /// </summary>
+        [Test]
+        public void GivenOneInchAndOneFeet_WhenCompared_ShouldReturnNotEqual()
+        {
+            double inch1 = this.quantityMeasurement.GetConvertedValue(1, Units.INCH_TO_FEET);
+            double inch2 = this.quantityMeasurement.GetConvertedValue(1, Units.FEET_TO_INCH);
+            Assert.AreNotEqual(inch2, inch1);
+        }
+
+        /// <summary>
+        /// Test 1.15: To Check 1 Feet is equal to 12 Inch.
+        /// </summary>
+        [Test]
+        public void GivenOneFeetAndTwelveInch_WhenCompared_ShouldReturnEqual()
+        {
+            double inch1 = this.quantityMeasurement.GetConvertedValue(1, Units.INCH_TO_FEET);
+            double inch2 = this.quantityMeasurement.GetConvertedValue(1, Units.FEET_TO_INCH);
+            Assert.AreNotEqual(inch2, inch1);
+        }
+
+        /// <summary>
+        /// Test 1.16: To Check 12 Inch is equal to 1 Feet.
+        /// </summary>
+        [Test]
+        public void GivenTwelveInchAndOneFeet_WhenCompared_ShouldReturnEqual()
+        {
+            double inch1 = this.quantityMeasurement.GetConvertedValue(12, Units.INCH_TO_FEET);
+            double inch2 = this.quantityMeasurement.GetConvertedValue(1, Units.FEET_TO_INCH);
+            Assert.AreNotEqual(inch2, inch1);
+        }
     }
 }
