@@ -65,5 +65,16 @@ namespace QuantityMeasurementProblemTest
             QuantityMeasurement quantity2 = new QuantityMeasurement();
             Assert.AreEqual(quantity1, quantity2);
         }
+
+        /// <summary>
+        /// Test 1.5: Test To Check Equality On Value.
+        /// </summary>
+        [Test]
+        public void GivenTwoSameValues_WhenCompared_ShouldReturnEqual()
+        {
+            double value1 = this.quantityMeasurement.GetFeet(10.0);
+            double value2 = this.quantityMeasurement.GetFeet(10.0);
+            Assert.AreEqual(value1, value2);
+        }
     }
 }
