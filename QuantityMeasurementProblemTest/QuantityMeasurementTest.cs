@@ -54,5 +54,16 @@ namespace QuantityMeasurementProblemTest
             bool result = this.quantityMeasurement.Equals(this.quantityMeasurement);
             Assert.IsTrue(result);
         }
+
+        /// <summary>
+        /// Test 1.4:Test To Check Equality On Instance Type.
+        /// </summary>
+        [Test]
+        public void GivenTwoType_WhenTypeIsSame_ShouldReturnTrue()
+        {
+            QuantityMeasurement quantity1 = new QuantityMeasurement();
+            QuantityMeasurement quantity2 = new QuantityMeasurement();
+            Assert.AreEqual(quantity1, quantity2);
+        }
     }
 }
