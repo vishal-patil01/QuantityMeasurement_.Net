@@ -35,5 +35,14 @@ namespace QuantityMeasurementProblemTest
             double valueInFeet2 = this.quantityMeasurement.GetFeet(0.0);
             Assert.AreEqual(valueInFeet, valueInFeet2);
         }
+
+        /// <summary>
+        /// Test 1.2: To Check if Object is null.
+        /// </summary>
+        [Test]
+        public void GivenNullFeetValue_WhenChecked_ShouldReturnFalse()
+        {
+            Assert.IsFalse(this.quantityMeasurement.Equals(null));
+        }
     }
 }
