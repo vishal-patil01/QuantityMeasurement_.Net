@@ -13,11 +13,11 @@ namespace QuantityMeasurementProblem
         /// <summary>
         /// Convert Passed Value To Feet.
         /// </summary>
-        /// <param name="feet">Any Length Value</param>
+        /// <param name="value">Any Length Value</param>
         /// <returns>Feet Value</returns>
-        public double GetFeet(double feet)
+        public double GetFeet(double value)
         {
-            return feet;
+            return value;
         }
 
         /// <summary>
@@ -50,5 +50,15 @@ namespace QuantityMeasurementProblem
         /// </summary>
         /// <returns>HashCode Value</returns>
         public override int GetHashCode() => base.GetHashCode();
+
+        /// <summary>
+        /// Convert Passed Value To Feet.
+        /// </summary>
+        /// <param name="value">Any Length Value</param>
+        /// <returns>Feet Value</returns>
+        public double GetInch(double value)
+        {
+            return value;
+        }
     }
 }
