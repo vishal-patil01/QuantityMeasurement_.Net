@@ -44,5 +44,15 @@ namespace QuantityMeasurementProblemTest
         {
             Assert.IsFalse(this.quantityMeasurement.Equals(null));
         }
+
+        /// <summary>
+        /// Test 1.3:Test To Check Equality On Object Reference.
+        /// </summary>
+        [Test]
+        public void GivenReferenceObject_WhenEqual_ShouldReturnTrue()
+        {
+            bool result = this.quantityMeasurement.Equals(this.quantityMeasurement);
+            Assert.IsTrue(result);
+        }
     }
 }
