@@ -10,5 +10,14 @@ namespace QuantityMeasurementProblem
     /// </summary>
     public class QuantityMeasurement
     {
+        /// <summary>
+        /// Convert Passed Value To Feet.
+        /// </summary>
+        /// <param name="feet">Any Length Value</param>
+        /// <returns>Feet Value</returns>
+        public double GetFeet(double feet)
+        {
+            return feet;
+        }
     }
 }
