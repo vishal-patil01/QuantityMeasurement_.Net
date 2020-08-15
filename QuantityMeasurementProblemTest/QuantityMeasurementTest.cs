@@ -197,12 +197,12 @@ namespace QuantityMeasurementProblemTest
         }
 
         /// <summary>
-        /// Test 1.17: check equality for values of 3Feet & 1Yard.
+        /// Test 1.17: check equality for values of 3Feet And 1Yard.
         /// </summary>
         [Test]
         public void GivenThreeFeetandOneYardValueCheck_WhenEqual_ShouldReturnEqual()
         {
-            double value1 = this.quantityMeasurement.GetConvertedValue(3.0,Units.FEET_TO_INCH);
+            double value1 = this.quantityMeasurement.GetConvertedValue(3.0, Units.FEET_TO_INCH);
             double value2 = this.quantityMeasurement.GetConvertedValue(1.0, Units.YARD_TO_INCH);
             Assert.AreEqual(value1, value2);
         }
@@ -261,6 +261,7 @@ namespace QuantityMeasurementProblemTest
             double value2 = this.quantityMeasurement.GetConvertedValue(5, Units.CENTIMETER_TO_INCH);
             Assert.AreEqual(value1, value2);
         }
+
         /// <summary>
         /// Test To Check 0 Inch is equal to 0 Centimeter.
         /// </summary>
@@ -270,6 +271,17 @@ namespace QuantityMeasurementProblemTest
             double value1 = this.quantityMeasurement.GetConvertedValue(0, Units.INCH);
             double value2 = this.quantityMeasurement.GetConvertedValue(0, Units.CENTIMETER_TO_INCH);
             Assert.AreEqual(value1, value2);
+        }
+
+        /// <summary>
+        /// Test To Check 2 Inch Added to 2 Inch is equal to 4.
+        /// </summary>
+        [Test]
+        public void GivenTwoInchAndTwoInch_WhenAdded_ShouldReturnFour()
+        {
+            double value1 = this.quantityMeasurement.GetConvertedValue(2, Units.INCH);
+            double value2 = this.quantityMeasurement.GetConvertedValue(2, Units.INCH);
+            Assert.AreEqual(value1 + value2,4);
         }
     }
 }
