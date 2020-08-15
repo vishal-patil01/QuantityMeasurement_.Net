@@ -283,5 +283,16 @@ namespace QuantityMeasurementProblemTest
             double value2 = this.quantityMeasurement.GetConvertedValue(2, Units.INCH);
             Assert.AreEqual(value1 + value2,4);
         }
+
+        /// <summary>
+        /// Test To Check 1 Feet Added to 2 Inch is equal to 14Inch.
+        /// </summary>
+        [Test]
+        public void GivenOneFeetAndTwoInch_WhenAdded_ShouldReturnFourteen()
+        {
+            double value1 = this.quantityMeasurement.GetConvertedValue(1, Units.FEET_TO_INCH);
+            double value2 = this.quantityMeasurement.GetConvertedValue(2, Units.INCH);
+            Assert.AreEqual(value1 + value2, 14);
+        }
     }
 }
