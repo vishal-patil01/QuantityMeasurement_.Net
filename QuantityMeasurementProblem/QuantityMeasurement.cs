@@ -9,12 +9,12 @@ namespace QuantityMeasurementProblem
     public class QuantityMeasurement
     {
         /// <summary>
-        /// Convert Passed Value To Feet.
+        /// Convert Passed Value To Given Unit.
         /// </summary>
-        /// <param name="value">Any Length Value</param>
+        /// <param name="value">Any double Value </param>
         /// <param name="units">Units Value</param>
-        /// <returns>Feet Value</returns>
-        public double GetConvertedValue(double value, double units)
+        /// <returns>Converted Value</returns>
+        public double GetConvertedValue(double value, dynamic units)
         {
             return value * units;
         }
@@ -23,7 +23,7 @@ namespace QuantityMeasurementProblem
         /// Override Equals Method.
         /// </summary>
         /// <param name="obj">Instance Of Any Object</param>
-        /// <returns>Return True If Parameter Value Is Not Null</returns>
+        /// <returns>Return True If Parameter Value Is Equal To Instance Or Its Type</returns>
         public override bool Equals(object obj)
         {
             if (obj == null)
@@ -49,5 +49,16 @@ namespace QuantityMeasurementProblem
         /// </summary>
         /// <returns>HashCode Value</returns>
         public override int GetHashCode() => base.GetHashCode();
+
+        /// <summary>
+        /// Convert Passed Value To Given Unit
+        /// </summary>
+        /// <param name="value">Any Double Value</param>
+        /// <param name="unit">Instance Of Temperature</param>
+        /// <returns>Converted Value</returns>
+        public double GetConvertedValue(double value, Temperature unit)
+        {
+            return unit == Temperature.CELSIUS ? (value * unit.Value) + 32 : value * unit.Value;
+        }
     }
 }
