@@ -360,5 +360,16 @@ namespace QuantityMeasurementProblemTest
             double value2 = this.quantityMeasurement.GetConvertedValue(1000, Units.GRAM_TO_KILLOGRAM);
             Assert.AreEqual(value1, value2);
         }
+
+        /// <summary>
+        /// Test To Check 1 Ton Compared to 1000 Killogram Then Returns Is Equals.
+        /// </summary>
+        [Test]
+        public void GivenOneThousandKillogramAndOneTon_WhenCompared_ShouldReturnEquals()
+        {
+            double value1 = this.quantityMeasurement.GetConvertedValue(1, Units.TON_TO_KILLOGRAM);
+            double value2 = this.quantityMeasurement.GetConvertedValue(1000, Units.KILLOGRAM);
+            Assert.AreEqual(value1, value2);
+        }
     }
 }
