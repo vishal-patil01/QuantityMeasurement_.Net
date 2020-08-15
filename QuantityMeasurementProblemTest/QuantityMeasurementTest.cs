@@ -228,5 +228,16 @@ namespace QuantityMeasurementProblemTest
             double value2 = this.quantityMeasurement.GetConvertedValue(1, Units.YARD_TO_INCH);
             Assert.AreNotEqual(value1, value2);
         }
+
+        /// <summary>
+        /// Test 1.17:Test To Check 36 Inch is equal to 1 Yard.
+        /// </summary>
+        [Test]
+        public void GivenThirtysixInchandOneYardValue_WhenCompared_ShouldReturnEqual()
+        {
+            double value1 = this.quantityMeasurement.GetConvertedValue(36, Units.INCH);
+            double value2 = this.quantityMeasurement.GetConvertedValue(1, Units.YARD_TO_INCH);
+            Assert.AreEqual(value1, value2);
+        }
     }
 }
