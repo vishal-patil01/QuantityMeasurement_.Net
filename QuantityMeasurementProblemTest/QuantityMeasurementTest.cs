@@ -31,8 +31,8 @@ namespace QuantityMeasurementProblemTest
         [Test]
         public void GivenTwoFeetWithSameValues_WhenCompared_ShouldReturnEqual()
         {
-            double valueInFeet = this.quantityMeasurement.GetConvertedValue(1, Units.FEET_TO_INCH);
-            double valueInFeet2 = this.quantityMeasurement.GetConvertedValue(1, Units.FEET_TO_INCH);
+            double valueInFeet = this.quantityMeasurement.GetConvertedValue(1, Length.FEET_TO_INCH);
+            double valueInFeet2 = this.quantityMeasurement.GetConvertedValue(1, Length.FEET_TO_INCH);
             Assert.AreEqual(valueInFeet, valueInFeet2);
         }
 
@@ -72,8 +72,8 @@ namespace QuantityMeasurementProblemTest
         [Test]
         public void GivenTwoSameValues_WhenCompared_ShouldReturnEqual()
         {
-            double value1 = this.quantityMeasurement.GetConvertedValue(10.0, Units.FEET_TO_INCH);
-            double value2 = this.quantityMeasurement.GetConvertedValue(10.0, Units.FEET_TO_INCH);
+            double value1 = this.quantityMeasurement.GetConvertedValue(10.0, Length.FEET_TO_INCH);
+            double value2 = this.quantityMeasurement.GetConvertedValue(10.0, Length.FEET_TO_INCH);
             Assert.AreEqual(value1, value2);
         }
 
@@ -83,8 +83,8 @@ namespace QuantityMeasurementProblemTest
         [Test]
         public void GivenTwoInchSameValues_WhenCompared_ShouldReturnEqual()
         {
-            double inch1 = this.quantityMeasurement.GetConvertedValue(0.0, Units.INCH);
-            double inch2 = this.quantityMeasurement.GetConvertedValue(0.0, Units.INCH);
+            double inch1 = this.quantityMeasurement.GetConvertedValue(0.0, Length.INCH);
+            double inch2 = this.quantityMeasurement.GetConvertedValue(0.0, Length.INCH);
             Assert.AreEqual(inch1, inch2);
         }
 
@@ -94,8 +94,8 @@ namespace QuantityMeasurementProblemTest
         [Test]
         public void GivenTwoDifferentInchValues_WhenCompared_ShouldReturnNotEqual()
         {
-            double inch1 = this.quantityMeasurement.GetConvertedValue(0.0, Units.INCH);
-            double inch2 = this.quantityMeasurement.GetConvertedValue(10.0, Units.INCH);
+            double inch1 = this.quantityMeasurement.GetConvertedValue(0.0, Length.INCH);
+            double inch2 = this.quantityMeasurement.GetConvertedValue(10.0, Length.INCH);
             Assert.AreNotEqual(inch1, inch2);
         }
 
@@ -136,8 +136,8 @@ namespace QuantityMeasurementProblemTest
         [Test]
         public void GivenTwoSameInchValues_WhenCompared_ShouldReturnEqual()
         {
-            double inch1 = this.quantityMeasurement.GetConvertedValue(10.0, Units.INCH);
-            double inch2 = this.quantityMeasurement.GetConvertedValue(10.0, Units.INCH);
+            double inch1 = this.quantityMeasurement.GetConvertedValue(10.0, Length.INCH);
+            double inch2 = this.quantityMeasurement.GetConvertedValue(10.0, Length.INCH);
             Assert.AreEqual(inch2, inch1);
         }
 
@@ -147,8 +147,8 @@ namespace QuantityMeasurementProblemTest
         [Test]
         public void GivenZeroFeetAndZeroInch_WhenCompared_ShouldReturnEqual()
         {
-            double inch1 = this.quantityMeasurement.GetConvertedValue(0, Units.FEET_TO_INCH);
-            double inch2 = this.quantityMeasurement.GetConvertedValue(0, Units.INCH);
+            double inch1 = this.quantityMeasurement.GetConvertedValue(0, Length.FEET_TO_INCH);
+            double inch2 = this.quantityMeasurement.GetConvertedValue(0, Length.INCH);
             Assert.AreEqual(inch2, inch1);
         }
 
@@ -158,8 +158,8 @@ namespace QuantityMeasurementProblemTest
         [Test]
         public void GivenOneFeetAndOneInch_WhenCompared_ShouldReturnNotEqual()
         {
-            double inch1 = this.quantityMeasurement.GetConvertedValue(1, Units.FEET_TO_INCH);
-            double inch2 = this.quantityMeasurement.GetConvertedValue(1, Units.INCH);
+            double inch1 = this.quantityMeasurement.GetConvertedValue(1, Length.FEET_TO_INCH);
+            double inch2 = this.quantityMeasurement.GetConvertedValue(1, Length.INCH);
             Assert.AreNotEqual(inch2, inch1);
         }
 
@@ -169,8 +169,8 @@ namespace QuantityMeasurementProblemTest
         [Test]
         public void GivenOneInchAndOneFeet_WhenCompared_ShouldReturnNotEqual()
         {
-            double inch1 = this.quantityMeasurement.GetConvertedValue(1, Units.INCH);
-            double inch2 = this.quantityMeasurement.GetConvertedValue(1, Units.FEET_TO_INCH);
+            double inch1 = this.quantityMeasurement.GetConvertedValue(1, Length.INCH);
+            double inch2 = this.quantityMeasurement.GetConvertedValue(1, Length.FEET_TO_INCH);
             Assert.AreNotEqual(inch2, inch1);
         }
 
@@ -180,8 +180,8 @@ namespace QuantityMeasurementProblemTest
         [Test]
         public void GivenOneFeetAndTwelveInch_WhenCompared_ShouldReturnEqual()
         {
-            double inch1 = this.quantityMeasurement.GetConvertedValue(1, Units.INCH);
-            double inch2 = this.quantityMeasurement.GetConvertedValue(1, Units.FEET_TO_INCH);
+            double inch1 = this.quantityMeasurement.GetConvertedValue(1, Length.INCH);
+            double inch2 = this.quantityMeasurement.GetConvertedValue(1, Length.FEET_TO_INCH);
             Assert.AreNotEqual(inch2, inch1);
         }
 
@@ -191,8 +191,8 @@ namespace QuantityMeasurementProblemTest
         [Test]
         public void GivenTwelveInchAndOneFeet_WhenCompared_ShouldReturnEqual()
         {
-            double inch1 = this.quantityMeasurement.GetConvertedValue(12, Units.INCH);
-            double inch2 = this.quantityMeasurement.GetConvertedValue(1, Units.FEET_TO_INCH);
+            double inch1 = this.quantityMeasurement.GetConvertedValue(12, Length.INCH);
+            double inch2 = this.quantityMeasurement.GetConvertedValue(1, Length.FEET_TO_INCH);
             Assert.AreEqual(inch2, inch1);
         }
 
@@ -202,8 +202,8 @@ namespace QuantityMeasurementProblemTest
         [Test]
         public void GivenThreeFeetandOneYardValueCheck_WhenEqual_ShouldReturnEqual()
         {
-            double value1 = this.quantityMeasurement.GetConvertedValue(3.0, Units.FEET_TO_INCH);
-            double value2 = this.quantityMeasurement.GetConvertedValue(1.0, Units.YARD_TO_INCH);
+            double value1 = this.quantityMeasurement.GetConvertedValue(3.0, Length.FEET_TO_INCH);
+            double value2 = this.quantityMeasurement.GetConvertedValue(1.0, Length.YARD_TO_INCH);
             Assert.AreEqual(value1, value2);
         }
 
@@ -213,8 +213,8 @@ namespace QuantityMeasurementProblemTest
         [Test]
         public void GivenOneFeetandOneYardValueCheck_WhenNotEqual_ShouldReturnNotEqual()
         {
-            double value1 = this.quantityMeasurement.GetConvertedValue(1, Units.FEET_TO_INCH);
-            double value2 = this.quantityMeasurement.GetConvertedValue(1, Units.YARD_TO_INCH);
+            double value1 = this.quantityMeasurement.GetConvertedValue(1, Length.FEET_TO_INCH);
+            double value2 = this.quantityMeasurement.GetConvertedValue(1, Length.YARD_TO_INCH);
             Assert.AreNotEqual(value1, value2);
         }
 
@@ -224,8 +224,8 @@ namespace QuantityMeasurementProblemTest
         [Test]
         public void GivenOneInchandOneYardValue_WhenCompared_ShouldReturnNotEqual()
         {
-            double value1 = this.quantityMeasurement.GetConvertedValue(1, Units.INCH);
-            double value2 = this.quantityMeasurement.GetConvertedValue(1, Units.YARD_TO_INCH);
+            double value1 = this.quantityMeasurement.GetConvertedValue(1, Length.INCH);
+            double value2 = this.quantityMeasurement.GetConvertedValue(1, Length.YARD_TO_INCH);
             Assert.AreNotEqual(value1, value2);
         }
 
@@ -235,8 +235,8 @@ namespace QuantityMeasurementProblemTest
         [Test]
         public void GivenThirtysixInchandOneYardValue_WhenCompared_ShouldReturnEqual()
         {
-            double value1 = this.quantityMeasurement.GetConvertedValue(36, Units.INCH);
-            double value2 = this.quantityMeasurement.GetConvertedValue(1, Units.YARD_TO_INCH);
+            double value1 = this.quantityMeasurement.GetConvertedValue(36, Length.INCH);
+            double value2 = this.quantityMeasurement.GetConvertedValue(1, Length.YARD_TO_INCH);
             Assert.AreEqual(value1, value2);
         }
 
@@ -246,8 +246,8 @@ namespace QuantityMeasurementProblemTest
         [Test]
         public void GivenThreeFeetAndOneYardValue_WhenCompared_ShouldReturnEqual()
         {
-            double value1 = this.quantityMeasurement.GetConvertedValue(3, Units.FEET_TO_INCH);
-            double value2 = this.quantityMeasurement.GetConvertedValue(1, Units.YARD_TO_INCH);
+            double value1 = this.quantityMeasurement.GetConvertedValue(3, Length.FEET_TO_INCH);
+            double value2 = this.quantityMeasurement.GetConvertedValue(1, Length.YARD_TO_INCH);
             Assert.AreEqual(value1, value2);
         }
 
@@ -257,8 +257,8 @@ namespace QuantityMeasurementProblemTest
         [Test]
         public void GivenTwoInchAndFiveCentimeterValue_WhenCompared_ShouldReturnEqual()
         {
-            double value1 = this.quantityMeasurement.GetConvertedValue(2, Units.INCH);
-            double value2 = this.quantityMeasurement.GetConvertedValue(5, Units.CENTIMETER_TO_INCH);
+            double value1 = this.quantityMeasurement.GetConvertedValue(2, Length.INCH);
+            double value2 = this.quantityMeasurement.GetConvertedValue(5, Length.CENTIMETER_TO_INCH);
             Assert.AreEqual(value1, value2);
         }
 
@@ -268,8 +268,8 @@ namespace QuantityMeasurementProblemTest
         [Test]
         public void GivenZeroInchAndZeroCentimeterValue_WhenCompared_ShouldReturnEqual()
         {
-            double value1 = this.quantityMeasurement.GetConvertedValue(0, Units.INCH);
-            double value2 = this.quantityMeasurement.GetConvertedValue(0, Units.CENTIMETER_TO_INCH);
+            double value1 = this.quantityMeasurement.GetConvertedValue(0, Length.INCH);
+            double value2 = this.quantityMeasurement.GetConvertedValue(0, Length.CENTIMETER_TO_INCH);
             Assert.AreEqual(value1, value2);
         }
 
@@ -279,8 +279,8 @@ namespace QuantityMeasurementProblemTest
         [Test]
         public void GivenTwoInchAndTwoInch_WhenAdded_ShouldReturnFour()
         {
-            double value1 = this.quantityMeasurement.GetConvertedValue(2, Units.INCH);
-            double value2 = this.quantityMeasurement.GetConvertedValue(2, Units.INCH);
+            double value1 = this.quantityMeasurement.GetConvertedValue(2, Length.INCH);
+            double value2 = this.quantityMeasurement.GetConvertedValue(2, Length.INCH);
             Assert.AreEqual(value1 + value2, 4);
         }
 
@@ -290,8 +290,8 @@ namespace QuantityMeasurementProblemTest
         [Test]
         public void GivenOneFeetAndTwoInch_WhenAdded_ShouldReturnFourteen()
         {
-            double value1 = this.quantityMeasurement.GetConvertedValue(1, Units.FEET_TO_INCH);
-            double value2 = this.quantityMeasurement.GetConvertedValue(2, Units.INCH);
+            double value1 = this.quantityMeasurement.GetConvertedValue(1, Length.FEET_TO_INCH);
+            double value2 = this.quantityMeasurement.GetConvertedValue(2, Length.INCH);
             Assert.AreEqual(value1 + value2, 14);
         }
 
@@ -301,8 +301,8 @@ namespace QuantityMeasurementProblemTest
         [Test]
         public void GivenOneFeetAndOneFeet_WhenAdded_ShouldReturnTwentyFour()
         {
-            double value1 = this.quantityMeasurement.GetConvertedValue(1, Units.FEET_TO_INCH);
-            double value2 = this.quantityMeasurement.GetConvertedValue(1, Units.FEET_TO_INCH);
+            double value1 = this.quantityMeasurement.GetConvertedValue(1, Length.FEET_TO_INCH);
+            double value2 = this.quantityMeasurement.GetConvertedValue(1, Length.FEET_TO_INCH);
             Assert.AreEqual(value1 + value2, 24);
         }
 
@@ -312,41 +312,41 @@ namespace QuantityMeasurementProblemTest
         [Test]
         public void GivenTwoInchTwoAndPointFiveCentimeter_WhenAdded_ShouldReturnThreeCentimeter()
         {
-            double value1 = this.quantityMeasurement.GetConvertedValue(2, Units.INCH);
-            double value2 = this.quantityMeasurement.GetConvertedValue(2.5, Units.CENTIMETER_TO_INCH);
+            double value1 = this.quantityMeasurement.GetConvertedValue(2, Length.INCH);
+            double value2 = this.quantityMeasurement.GetConvertedValue(2.5, Length.CENTIMETER_TO_INCH);
             Assert.AreEqual(value1 + value2, 3);
         }
 
         /// <summary>
-        /// Test To Check 1 Gallon And 3.75 Litre is equal.
+        /// Test To Check 1 Gallon And 3.75 liter is equal.
         /// </summary>
         [Test]
         public void GivenOneGallonAndThreePointSeventyEighty_WhenCompared_ShouldReturnEqual()
         {
-            double value1 = this.quantityMeasurement.GetConvertedValue(1, Units.GALLON_TO_LITRE);
-            double value2 = this.quantityMeasurement.GetConvertedValue(3.785, Units.LITRE);
+            double value1 = this.quantityMeasurement.GetConvertedValue(1, Volume.GALLON_TO_LITRE);
+            double value2 = this.quantityMeasurement.GetConvertedValue(3.785, Volume.LITRE);
             Assert.AreEqual(value1, value2);
         }
 
         /// <summary>
-        /// Test To Check 1 Gallon Added to 3.78 Litre is equal to 7.57Litre.
+        /// Test To Check 1 Gallon Added to 3.78 Liter is equal to 7.57Liter.
         /// </summary>
         [Test]
         public void GivenOneGallonAndThreePointSeventyEightLitre_WhenAdded_ShouldReturnSevenPointFiftySevenLitre()
         {
-            double value1 = this.quantityMeasurement.GetConvertedValue(1, Units.GALLON_TO_LITRE);
-            double value2 = this.quantityMeasurement.GetConvertedValue(3.785, Units.LITRE);
+            double value1 = this.quantityMeasurement.GetConvertedValue(1, Volume.GALLON_TO_LITRE);
+            double value2 = this.quantityMeasurement.GetConvertedValue(3.785, Volume.LITRE);
             Assert.AreEqual(value1 + value2, 7.57);
         }
 
         /// <summary>
-        /// Test To Check 1 Liter Added to 1000 MiliLitre is equal to 2Litre.
+        /// Test To Check 1 Liter Added to 1000 Milliliter is equal to 2Liter.
         /// </summary>
         [Test]
         public void GivenOneLitreAndOneThousandMiliLitre_WhenAdded_ShouldReturnTwoLitre()
         {
-            double value1 = this.quantityMeasurement.GetConvertedValue(1, Units.LITRE);
-            double value2 = this.quantityMeasurement.GetConvertedValue(1000, Units.MILLILITER_TO_LITRE);
+            double value1 = this.quantityMeasurement.GetConvertedValue(1, Volume.LITRE);
+            double value2 = this.quantityMeasurement.GetConvertedValue(1000, Volume.MILLILITER_TO_LITRE);
             Assert.AreEqual(value1 + value2, 2.0);
         }
 
@@ -356,19 +356,19 @@ namespace QuantityMeasurementProblemTest
         [Test]
         public void GivenOneKillogramAndOneThousandGrams_WhenCompared_ShouldReturnEquals()
         {
-            double value1 = this.quantityMeasurement.GetConvertedValue(1, Units.KILLOGRAM);
-            double value2 = this.quantityMeasurement.GetConvertedValue(1000, Units.GRAM_TO_KILLOGRAM);
+            double value1 = this.quantityMeasurement.GetConvertedValue(1, Weight.KILLOGRAM);
+            double value2 = this.quantityMeasurement.GetConvertedValue(1000, Weight.GRAM_TO_KILLOGRAM);
             Assert.AreEqual(value1, value2);
         }
 
         /// <summary>
-        /// Test To Check 1 Ton Compared to 1000 Killogram Then Returns Is Equals.
+        /// Test To Check 1 Ton Compared to 1000 Kilogram Then Returns Is Equals.
         /// </summary>
         [Test]
         public void GivenOneThousandKillogramAndOneTon_WhenCompared_ShouldReturnEquals()
         {
-            double value1 = this.quantityMeasurement.GetConvertedValue(1, Units.TON_TO_KILLOGRAM);
-            double value2 = this.quantityMeasurement.GetConvertedValue(1000, Units.KILLOGRAM);
+            double value1 = this.quantityMeasurement.GetConvertedValue(1, Weight.TON_TO_KILLOGRAM);
+            double value2 = this.quantityMeasurement.GetConvertedValue(1000, Weight.KILLOGRAM);
             Assert.AreEqual(value1, value2);
         }
 
@@ -378,8 +378,8 @@ namespace QuantityMeasurementProblemTest
         [Test]
         public void GivenOneThousandGramAndAndOneTon_WhenAdded_ShouldReturnOneThousandOneKG()
         {
-            double value1 = this.quantityMeasurement.GetConvertedValue(1000, Units.GRAM_TO_KILLOGRAM);
-            double value2 = this.quantityMeasurement.GetConvertedValue(1, Units.TON_TO_KILLOGRAM);
+            double value1 = this.quantityMeasurement.GetConvertedValue(1000, Weight.GRAM_TO_KILLOGRAM);
+            double value2 = this.quantityMeasurement.GetConvertedValue(1, Weight.TON_TO_KILLOGRAM);
             Assert.AreEqual(value1 + value2, 1001);
         }
     }
