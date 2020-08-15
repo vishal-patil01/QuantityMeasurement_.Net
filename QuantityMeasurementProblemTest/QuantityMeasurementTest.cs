@@ -195,5 +195,16 @@ namespace QuantityMeasurementProblemTest
             double inch2 = this.quantityMeasurement.GetConvertedValue(1, Units.FEET_TO_INCH);
             Assert.AreNotEqual(inch2, inch1);
         }
+
+        /// <summary>
+        /// Test 1.17: check equality for values of 3Feet & 1Yard.
+        /// </summary>
+        [Test]
+        public void GivenThreeFeetandOneYardValueCheck_WhenEqual_ShouldReturnEqual()
+        {
+            double value1 = this.quantityMeasurement.GetConvertedValue(3.0,Units.FEET_TO_INCH);
+            double value2 = this.quantityMeasurement.GetConvertedValue(1.0, Units.YARD_TO_INCH);
+            Assert.AreEqual(value1, value2);
+        }
     }
 }
