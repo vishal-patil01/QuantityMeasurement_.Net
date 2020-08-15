@@ -12,5 +12,6 @@ namespace QuantityMeasurementProblem
         public const double INCH = 1.0;
         public const double FEET_TO_INCH = 1 * 12.0;
         public const double YARD_TO_INCH = 1 * 36.0;
-    } 
+        public const double CENTIMETER_TO_INCH = 1 / 2.5;
+    }
 }

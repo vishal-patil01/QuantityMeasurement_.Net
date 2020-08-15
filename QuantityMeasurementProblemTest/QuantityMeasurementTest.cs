@@ -250,5 +250,26 @@ namespace QuantityMeasurementProblemTest
             double value2 = this.quantityMeasurement.GetConvertedValue(1, Units.YARD_TO_INCH);
             Assert.AreEqual(value1, value2);
         }
+
+        /// <summary>
+        /// Test To Check 2 Inch is equal to 5 Centimeter.
+        /// </summary>
+        [Test]
+        public void GivenTwoInchAndFiveCentimeterValue_WhenCompared_ShouldReturnEqual()
+        {
+            double value1 = this.quantityMeasurement.GetConvertedValue(2, Units.INCH);
+            double value2 = this.quantityMeasurement.GetConvertedValue(5, Units.CENTIMETER_TO_INCH);
+            Assert.AreEqual(value1, value2);
+        }
+        /// <summary>
+        /// Test To Check 0 Inch is equal to 0 Centimeter.
+        /// </summary>
+        [Test]
+        public void GivenZeroInchAndZeroCentimeterValue_WhenCompared_ShouldReturnEqual()
+        {
+            double value1 = this.quantityMeasurement.GetConvertedValue(0, Units.INCH);
+            double value2 = this.quantityMeasurement.GetConvertedValue(0, Units.CENTIMETER_TO_INCH);
+            Assert.AreEqual(value1, value2);
+        }
     }
 }
