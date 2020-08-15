@@ -305,5 +305,16 @@ namespace QuantityMeasurementProblemTest
             double value2 = this.quantityMeasurement.GetConvertedValue(1, Units.FEET_TO_INCH);
             Assert.AreEqual(value1 + value2, 24);
         }
+
+        /// <summary>
+        /// Test To Check 2 Inch Added to 2.5 Centimeter is equal to 3Centimeter.
+        /// </summary>
+        [Test]
+        public void GivenTwoInchTwoAndPointFiveCentimeter_WhenAdded_ShouldReturnThreeCentimeter()
+        {
+            double value1 = this.quantityMeasurement.GetConvertedValue(2, Units.INCH);
+            double value2 = this.quantityMeasurement.GetConvertedValue(2.5, Units.CENTIMETER_TO_INCH);
+            Assert.AreEqual(value1 + value2, 3);
+        }
     }
 }
