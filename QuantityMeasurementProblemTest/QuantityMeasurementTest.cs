@@ -324,8 +324,29 @@ namespace QuantityMeasurementProblemTest
         public void GivenOneGallonAndThreePointSeventyEighty_WhenCompared_ShouldReturnEqual()
         {
             double value1 = this.quantityMeasurement.GetConvertedValue(1, Units.GALLON_TO_LITRE);
-            double value2 = this.quantityMeasurement.GetConvertedValue(3.78, Units.LITRE);
+            double value2 = this.quantityMeasurement.GetConvertedValue(3.785, Units.LITRE);
             Assert.AreEqual(value1, value2);
+        }
+
+        /// <summary>
+        /// Test To Check 1 Gallon Added to 3.78 Litre is equal to 7.57Litre.
+        /// </summary>
+        [Test]
+        public void GivenOneGallonAndThreePointSeventyEightLitre_WhenAdded_ShouldReturnSevenPointFiftySevenLitre()
+        {
+            double value1 = this.quantityMeasurement.GetConvertedValue(1, Units.GALLON_TO_LITRE);
+            double value2 = this.quantityMeasurement.GetConvertedValue(3.785, Units.LITRE);
+            Assert.AreEqual(value1 + value2, 7.57);
+        }
+        /// <summary>
+        /// Test To Check 1 Liter Added to 1000 MiliLitre is equal to 2Litre.
+        /// </summary>
+        [Test]
+        public void GivenOneLitreAndOneThousandMiliLitre_WhenAdded_ShouldReturnTwoLitre()
+        {
+            double value1 = this.quantityMeasurement.GetConvertedValue(1, Units.LITRE);
+            double value2 = this.quantityMeasurement.GetConvertedValue(1000, Units.MILLILITER_TO_LITRE);
+            Assert.AreEqual(value1 + value2, 2.0);
         }
     }
 }
