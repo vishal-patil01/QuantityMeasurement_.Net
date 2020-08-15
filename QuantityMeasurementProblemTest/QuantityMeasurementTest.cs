@@ -281,7 +281,7 @@ namespace QuantityMeasurementProblemTest
         {
             double value1 = this.quantityMeasurement.GetConvertedValue(2, Units.INCH);
             double value2 = this.quantityMeasurement.GetConvertedValue(2, Units.INCH);
-            Assert.AreEqual(value1 + value2,4);
+            Assert.AreEqual(value1 + value2, 4);
         }
 
         /// <summary>
@@ -315,6 +315,17 @@ namespace QuantityMeasurementProblemTest
             double value1 = this.quantityMeasurement.GetConvertedValue(2, Units.INCH);
             double value2 = this.quantityMeasurement.GetConvertedValue(2.5, Units.CENTIMETER_TO_INCH);
             Assert.AreEqual(value1 + value2, 3);
+        }
+
+        /// <summary>
+        /// Test To Check 1 Gallon And 3.75 Litre is equal.
+        /// </summary>
+        [Test]
+        public void GivenOneGallonAndThreePointSeventyEighty_WhenCompared_ShouldReturnEqual()
+        {
+            double value1 = this.quantityMeasurement.GetConvertedValue(1, Units.GALLON_TO_LITRE);
+            double value2 = this.quantityMeasurement.GetConvertedValue(3.78, Units.LITRE);
+            Assert.AreEqual(value1, value2);
         }
     }
 }
