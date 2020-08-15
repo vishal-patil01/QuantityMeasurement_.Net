@@ -208,7 +208,7 @@ namespace QuantityMeasurementProblemTest
         }
 
         /// <summary>
-        /// Test 1.17:Test To Check 1 Feet is not equal to 1 Yard.
+        /// Test To Check 1 Feet is not equal to 1 Yard.
         /// </summary>
         [Test]
         public void GivenOneFeetandOneYardValueCheck_WhenNotEqual_ShouldReturnNotEqual()
@@ -219,7 +219,7 @@ namespace QuantityMeasurementProblemTest
         }
 
         /// <summary>
-        /// Test 1.17:Test To Check 1 Inch is not equal to 1 Yard.
+        /// Test To Check 1 Inch is not equal to 1 Yard.
         /// </summary>
         [Test]
         public void GivenOneInchandOneYardValue_WhenCompared_ShouldReturnNotEqual()
@@ -230,12 +230,23 @@ namespace QuantityMeasurementProblemTest
         }
 
         /// <summary>
-        /// Test 1.17:Test To Check 36 Inch is equal to 1 Yard.
+        /// Test To Check 36 Inch is equal to 1 Yard.
         /// </summary>
         [Test]
         public void GivenThirtysixInchandOneYardValue_WhenCompared_ShouldReturnEqual()
         {
             double value1 = this.quantityMeasurement.GetConvertedValue(36, Units.INCH);
+            double value2 = this.quantityMeasurement.GetConvertedValue(1, Units.YARD_TO_INCH);
+            Assert.AreEqual(value1, value2);
+        }
+
+        /// <summary>
+        /// Test To Check 3 Feet is equal to 1 Yard.
+        /// </summary>
+        [Test]
+        public void GivenThreeFeetAndOneYardValue_WhenCompared_ShouldReturnEqual()
+        {
+            double value1 = this.quantityMeasurement.GetConvertedValue(3, Units.FEET_TO_INCH);
             double value2 = this.quantityMeasurement.GetConvertedValue(1, Units.YARD_TO_INCH);
             Assert.AreEqual(value1, value2);
         }
