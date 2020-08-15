@@ -338,6 +338,7 @@ namespace QuantityMeasurementProblemTest
             double value2 = this.quantityMeasurement.GetConvertedValue(3.785, Units.LITRE);
             Assert.AreEqual(value1 + value2, 7.57);
         }
+
         /// <summary>
         /// Test To Check 1 Liter Added to 1000 MiliLitre is equal to 2Litre.
         /// </summary>
@@ -347,6 +348,17 @@ namespace QuantityMeasurementProblemTest
             double value1 = this.quantityMeasurement.GetConvertedValue(1, Units.LITRE);
             double value2 = this.quantityMeasurement.GetConvertedValue(1000, Units.MILLILITER_TO_LITRE);
             Assert.AreEqual(value1 + value2, 2.0);
+        }
+
+        /// <summary>
+        /// Test To Check 1 KG When Compared to 1000 Gram Then Returns Is Equals.
+        /// </summary>
+        [Test]
+        public void GivenOneKillogramAndOneThousandGrams_WhenCompared_ShouldReturnEquals()
+        {
+            double value1 = this.quantityMeasurement.GetConvertedValue(1, Units.KILLOGRAM);
+            double value2 = this.quantityMeasurement.GetConvertedValue(1000, Units.GRAM_TO_KILLOGRAM);
+            Assert.AreEqual(value1, value2);
         }
     }
 }
