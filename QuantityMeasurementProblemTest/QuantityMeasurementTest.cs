@@ -371,5 +371,16 @@ namespace QuantityMeasurementProblemTest
             double value2 = this.quantityMeasurement.GetConvertedValue(1000, Units.KILLOGRAM);
             Assert.AreEqual(value1, value2);
         }
+
+        /// <summary>
+        /// Test To Check 1 Ton And to 1000 Gram Then Returns 1001KG.
+        /// </summary>
+        [Test]
+        public void GivenOneThousandGramAndAndOneTon_WhenAdded_ShouldReturnOneThousandOneKG()
+        {
+            double value1 = this.quantityMeasurement.GetConvertedValue(1000, Units.GRAM_TO_KILLOGRAM);
+            double value2 = this.quantityMeasurement.GetConvertedValue(1, Units.TON_TO_KILLOGRAM);
+            Assert.AreEqual(value1 + value2, 1001);
+        }
     }
 }
